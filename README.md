@@ -6,7 +6,7 @@
 - Types don’t have `extends`, but we can use **intersection (`&`)** — although it’s a bit complicated.
 - When we work with many kinds of data or mixed types, then we should use **types**.
 
-## How does TypeScript help in improving code quality and project maintainability?
+## 🔍 How does TypeScript help in improving code quality and project maintainability?
 
 **TypeScript** is a modern and powerful language. When we use **TypeScript**, we often face problems like type issues and unexpected bugs, especially in large projects. But **TypeScript** gives us many useful features to solve these problems.
 

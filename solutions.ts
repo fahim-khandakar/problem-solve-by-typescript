@@ -5,30 +5,15 @@ const formatString = (input: string, toUpper: boolean = true): string => {
   return input?.toLocaleLowerCase();
 };
 
-// console.log(formatString("Hello World"));
-// console.log(formatString("Hello World", false));
-// console.log(formatString("Hello World", true));
-
 const filterByRating = (
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] => {
   return items?.filter((item) => item?.rating >= 4); // Example: filter items with rating >= 4
 };
 
-// const books = [
-//   { title: "Book A", rating: 3.5 },
-//   { title: "Book B", rating: 3.2 },
-//   { title: "Book C", rating: 3.0 },
-// ];
-
-// console.log(filterByRating(books));
-
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
-
-// console.log(concatenateArrays(["a", "b"], ["c"]));
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
 
 class Vehicle {
   private make: string;
@@ -55,10 +40,6 @@ class Car extends Vehicle {
   }
 }
 
-// const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel());
-
 const processValue = (value: string | number): number => {
   if (typeof value === "string") {
     return value.length; // Return the length of the string
@@ -66,9 +47,6 @@ const processValue = (value: string | number): number => {
     return value * 2; // Return the number itself
   }
 };
-
-// console.log(processValue("hello"));
-// console.log(processValue(10));
 
 interface Product {
   name: string;
@@ -81,15 +59,6 @@ const getMostExpensiveProduct = (products: Product[]): Product | null => {
     prev.price > curr.price ? prev : curr
   );
 };
-
-// const products = [
-//     { name: "Pen", price: 10 },
-//     { name: "Notebook", price: 25 },
-//     { name: "Bag", price: 50 },
-// ];
-
-// console.log(getMostExpensiveProduct(products));
-// Output: { name: "Bag", price: 50 }
 
 enum Day {
   Monday,
@@ -108,8 +77,6 @@ const getDayType = (day: Day): string => {
   return "Weekday";
 };
 
-// console.log(getDayType(Day.Friday));
-
 const squareAsync = async (n: number): Promise<number> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -118,7 +85,3 @@ const squareAsync = async (n: number): Promise<number> => {
     }, 1000);
   });
 };
-
-// squareAsync(5).then(console.log).catch(console.error); // 25 after 1 sec
-// squareAsync(-2).then(console.log).catch(console.error); // Error
-// squareAsync(0).then(console.log).catch(console.error); // 0 after 1 sec

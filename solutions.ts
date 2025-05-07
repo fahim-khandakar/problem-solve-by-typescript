@@ -109,3 +109,16 @@ const getDayType = (day: Day): string => {
 };
 
 // console.log(getDayType(Day.Friday));
+
+const squareAsync = async (n: number): Promise<number> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (n < 0) return reject(new Error("Negative number not allowed"));
+      resolve(n * n);
+    }, 1000);
+  });
+};
+
+// squareAsync(5).then(console.log).catch(console.error); // 25 after 1 sec
+// squareAsync(-2).then(console.log).catch(console.error); // Error
+// squareAsync(0).then(console.log).catch(console.error); // 0 after 1 sec

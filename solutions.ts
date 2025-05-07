@@ -90,3 +90,22 @@ const getMostExpensiveProduct = (products: Product[]): Product | null => {
 
 // console.log(getMostExpensiveProduct(products));
 // Output: { name: "Bag", price: 50 }
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+const getDayType = (day: Day): string => {
+  if (day === Day.Saturday || day === Day.Sunday) {
+    return "Weekend";
+  }
+  return "Weekday";
+};
+
+// console.log(getDayType(Day.Friday));

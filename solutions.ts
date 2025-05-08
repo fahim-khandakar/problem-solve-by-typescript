@@ -8,7 +8,7 @@ const formatString = (input: string, toUpper: boolean = true): string => {
 const filterByRating = (
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] => {
-  return items?.filter((item) => item?.rating >= 4); // Example: filter items with rating >= 4
+  return items?.filter((item) => item?.rating >= 4);
 };
 
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
@@ -42,9 +42,9 @@ class Car extends Vehicle {
 
 const processValue = (value: string | number): number => {
   if (typeof value === "string") {
-    return value.length; // Return the length of the string
+    return value.length;
   } else {
-    return value * 2; // Return the number itself
+    return value * 2;
   }
 };
 
